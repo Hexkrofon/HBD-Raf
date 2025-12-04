@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Selamat Ulang Tahun!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #042e6c, #4da6dd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: rgb(255, 255, 255);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+    h1 {
+      font-size: 28px;
+      color: #1c56af;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+    .cake {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 20px;
+      position: relative;
+    }
+    .cake .top {
+      background: #361f04;
+      height: 40px;
+      border-radius: 10px 10px 0 0;
+      position: relative;
+    }
+    .cake .base {
+      background: #72706e;
+      height: 30px;
+      border-radius: 0 0 10px 10px;
+      position: relative;
+    }
+    .topping {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .raisin {
+      width: 8px;
+      height: 8px;
+      background: #fdfefe;
+      border-radius: 50%;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+    }
+    .cream-line {
+      width: 100%;
+      height: 6px;
+      background: repeating-linear-gradient(90deg, #ffffff 0 10px, #f2e4d0 10px 20px);
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      border-radius: 3px;
+    }
+    .candle {
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 6px;
+      height: 20px;
+      background: #ffd93d;
+      border-radius: 3px;
+    }
+    .flame {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: radial-gradient(circle, #ffea00 0%, #ffa600 70%);
+      border-radius: 50%;
+      animation: flicker 1s infinite;
+    }
+    @keyframes flicker {
+      0%, 100% { opacity: 1; transform: translate(-50%, 0); }
+      50% { opacity: 0.6; transform: translate(-50%, -2px); }
+    }
+    footer {
+      font-size: 13px;
+      color: #888;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="cake">
+      <div class="flame"></div>
+      <div class="candle"></div>
+      <div class="top">
+        <div class="topping">
+          <div class="raisin"></div>
+          <div class="raisin"></div>
+          <div class="raisin"></div>
+        </div>
+      </div>
+      <div class="cream-line"></div>
+      <div class="base"></div>
+    </div>
+    <h1>Weeee HBD Raff 🎉🥳</h1>
+    <p>Semoga Panjang Umur, Sehat selalu, Sukses selalu, bahagia selalu, makin Jago main ML, ama moga cepet dapet cewe yang banyak awokawokawok</p>
+  <audio id="suara" src="Pesan.MP3"></audio>
+
+  <button onclick="putarSuara()">Putar pesan-pesan berikut</button>
+
+  <script>
+    function putarSuara() {
+      var audio = document.getElementById("suara");
+      audio.play();
+    }
+  </script>
+    <footer>Dari Aldo hehehe</footer>
+  </div>
+</body>
+</html>
